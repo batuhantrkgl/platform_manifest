@@ -5,6 +5,10 @@
            fetch="https://github.com/tequilaOS"
            revision="refs/heads/tobacco" />
 
+    <remote  name="tequila-gsi"
+           fetch="https://github.com/batuhantrkgl"
+           revision="refs/heads/tobacco-gsi" />
+
   <remote  name="tequila-gitlab"
            fetch="https://gitlab.com/tequilaOS"
            revision="refs/heads/tobacco" />
@@ -13,15 +17,15 @@
            fetch="https://github.com" />
 
   <!-- rootdir -->
-  <project path="bionic" name="platform_bionic" remote="tequila" />
+  <project path="bionic" name="platform_bionic" remote="tequila-gsi" />
   <project path="manifest" name="platform_manifest" remote="tequila" />
   <project path="tequila_ota" name="tequila_ota" remote="tequila" />
 
   <!-- bootable -->
-  <project path="bootable/recovery" name="platform_bootable_recovery" remote="tequila" />
+  <project path="bootable/recovery" name="platform_bootable_recovery" remote="tequila-gsi" />
 
   <!-- build -->
-  <project path="build/make" name="platform_build" groups="pdk" remote="tequila" >
+  <project path="build/make" name="platform_build" groups="pdk" remote="tequila-gsi" >
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
     <linkfile src="core" dest="build/core" />
@@ -49,14 +53,14 @@
   <project path="external/gptfdisk" name="platform_external_gptfdisk" remote="tequila" />
   <project path="external/json-c" name="platform_external_json-c" remote="tequila" />
   <project path="external/mksh" name="platform_external_mksh" remote="tequila" />
-  <project path="external/selinux" name="platform_external_selinux" remote="tequila" />
+  <project path="external/selinux" name="platform_external_selinux" remote="tequila-gsi" />
   <project path="external/tinycompress" name="platform_external_tinycompress" remote="tequila" />
   <project path="external/tinyxml" name="platform_external_tinyxml" remote="tequila" />
 
   <!-- frameworks -->
-  <project path="frameworks/av" name="platform_frameworks_av" remote="tequila" />
-  <project path="frameworks/base" name="platform_frameworks_base" remote="tequila" />
-  <project path="frameworks/native" name="platform_frameworks_native" remote="tequila" />
+  <project path="frameworks/av" name="platform_frameworks_av" remote="tequila-gsi" />
+  <project path="frameworks/base" name="platform_frameworks_base" remote="tequila-gsi" />
+  <project path="frameworks/native" name="platform_frameworks_native" remote="tequila-gsi" />
 
   <!-- hardware -->
   <project path="hardware/libhardware" name="platform_hardware_libhardware" remote="tequila" />
@@ -107,11 +111,11 @@
   <!-- packages -->
   <project path="packages/apps/DocumentsUI" name="platform_packages_apps_DocumentsUI" remote="tequila" />
   <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" remote="tequila" />
-  <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="tequila" />
+  <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="tequila-gsi" />
   <project path="packages/apps/ThemePicker" name="platform_packages_apps_ThemePicker" remote="tequila" />
   <project path="packages/apps/Updater" name="platform_packages_apps_Updater" remote="tequila" />
   <project path="packages/apps/tequilaSettings" name="platform_packages_apps_tequilaSettings" remote="tequila" />
-  <project path="packages/modules/Bluetooth" name="platform_packages_modules_Bluetooth" remote="tequila" />
+  <project path="packages/modules/Bluetooth" name="platform_packages_modules_Bluetooth" remote="tequila-gsi" />
   <project path="packages/modules/Wifi" name="platform_packages_modules_Wifi" remote="tequila" />
   <project path="packages/resources/devicesettings" name="platform_packages_resources_devicesettings" remote="tequila" />
 
@@ -122,7 +126,7 @@
   <project path="prebuilts/tools-tequila" name="platform_prebuilts_tools-tequila" remote="tequila" />
 
   <!-- system -->
-  <project path="system/core" name="platform_system_core" remote="tequila" />
+  <project path="system/core" name="platform_system_core" remote="tequila-gsi" />
   <project path="system/libhidl" name="platform_system_libhidl" remote="tequila" />
   <project path="system/media" name="platform_system_media" remote="tequila" />
   <project path="system/sepolicy" name="platform_system_sepolicy" remote="tequila" />
